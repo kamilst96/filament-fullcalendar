@@ -475,7 +475,7 @@ protected function headerActions(): array
              ->mutateFormDataUsing(function (array $data): array {
                  return [
                      ...$data,
-                     'calendar_id' => $this->record->id
+                     'calendar_id' => $this->eventRecord->id
                  ];
              })
      ];

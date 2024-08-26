@@ -18,7 +18,7 @@ trait InteractsWithRecords
     protected ?string $modelLabel = null;
 
     #[Locked]
-    public Model | int | string | null $record;
+    public Model | int | string | null $eventRecord;
 
     protected static ?string $recordRouteKeyName = null;
 
@@ -50,7 +50,7 @@ trait InteractsWithRecords
 
     public function getRecord(): ?Model
     {
-        $record = $this->record;
+        $record = $this->eventRecord;
 
         if ($record instanceof Model) {
             return $record;

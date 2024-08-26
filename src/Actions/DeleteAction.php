@@ -21,7 +21,7 @@ class DeleteAction extends BaseDeleteAction
 
         $this->after(
             function (FullCalendarWidget $livewire) {
-                $livewire->record = null;
+                $livewire->eventRecord = null;
                 $livewire->refreshRecords();
             }
         );
